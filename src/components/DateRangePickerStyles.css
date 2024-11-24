@@ -1,0 +1,247 @@
+.date-range-picker {
+  position: relative;
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  width: 250px;
+}
+
+.input-box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.clear-input-button {
+  cursor: pointer;
+}
+
+.date-input {
+  width: 100%;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+
+.input-box:focus-within {
+  border: 2px solid #007bff;
+}
+
+.calendar-container {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  z-index: 10;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  min-width: 650px;
+}
+
+.dual-calendar {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.dual-calendar > div {
+  width: 300px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+header button {
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background: #0056b3;
+}
+
+header .month-year-label {
+  font-weight: bold;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 0 10px;
+  display: flex;
+  gap: 5px;
+}
+
+header .month-year-label span {
+  padding: 5px;
+  border-radius: 8px;
+}
+
+header .month-year-label span:hover {
+  background: #e6e6e6;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  width: 14%;
+  text-align: center;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+td {
+  background: #f9f9f9;
+}
+
+td:hover {
+  background: #e6e6e6;
+}
+
+.current-date {
+  border: 2px solid #007bff;
+  font-weight: bold;
+  color: #007bff;
+}
+
+/* Style for weekends */
+.weekend {
+  background-color: #f0f0f0 !important;
+  color: #a0a0a0 !important;
+  cursor: not-allowed !important;
+}
+
+.selected {
+  background: #007bff !important;
+  color: white !important;
+  font-weight: bold;
+  border-radius: 4px !important;
+}
+
+.in-range {
+  background: #cce4ff;
+  color: #333;
+  border-radius: unset;
+}
+
+footer {
+  border-top: #ccc 1px solid;
+  margin-top: 15px;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+footer button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+footer button:hover {
+  background: #0056b3;
+}
+
+footer button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.predefined-ranges {
+  display: flex;
+  gap: 10px;
+}
+
+.predefined-range-button {
+  background: white;
+  color: #0056b3;
+}
+
+.predefined-range-button:hover {
+  background: white;
+  text-decoration: underline;
+}
+
+.year-selector-container{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Month Selector */
+.month-selector,
+.year-selector {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.month-cell,
+.year-cell {
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.month-cell:hover,
+.year-cell:hover {
+  background: #007bff;
+  color: white;
+}
+
+.year-change-buttons button {
+  grid-column: span 2;
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.year-change-buttons > button:hover {
+  background: #f9f9f9;
+}
+
+.year-change-buttons{
+  display: flex;
+  justify-content: space-between;
+}
+
+.month-change-button{
+  padding: 6px 12px;
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+.month-change-button:hover {
+  background: #f9f9f9;
+}
